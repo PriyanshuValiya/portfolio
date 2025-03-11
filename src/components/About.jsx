@@ -58,7 +58,7 @@ function About() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             {infoList.map((ele, idx) => (
               <motion.li

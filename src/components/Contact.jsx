@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 import { toast } from "sonner";
 import * as motion from "motion/react-client";
+import { LoaderCircle } from "lucide-react";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -12,16 +13,32 @@ function Contact() {
     email: "",
     message: "",
   });
+  const [load, setLoad] = useState(false);
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    toast("Email Sent Successfully...");
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+
+    try {
+      setLoad(true);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success("Email Sent Successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error(data.error || "Failed to send email.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong.");
+    } finally {
+      setLoad(false);
+    }
   };
 
   return (
@@ -62,7 +79,7 @@ function Contact() {
         className="max-w-2xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
         onSubmit={handleOnSubmit}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8">
@@ -75,7 +92,7 @@ function Contact() {
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
           />
           <motion.input
             className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
@@ -88,7 +105,7 @@ function Contact() {
             }
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
           />
         </div>
         <motion.textarea
@@ -102,22 +119,31 @@ function Contact() {
           }
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
         ></motion.textarea>
         <motion.button
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="py-3 px-8 w-max flex items-center justify-between gap-2 gap-x-5 bg-black/90 text-white rounded-full mx-auto hover:scale-105 hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
+          className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/90 text-white rounded-full mx-auto hover:scale-105 hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
           type="submit"
         >
-          Submit
-          <motion.div initial={{ x: -10 }} whileHover={{ x: 0 }}>
-            <Image
-              src={assets.right_arrow_white}
-              alt="submit"
-              className="w-4"
-            />
-          </motion.div>
+          {load ? (
+            <div className="flex items-center gap-x-4">
+              <LoaderCircle className="animate-spin" />
+              <p>Sending...</p>
+            </div>
+          ) : (
+            <div className="flex items-center gap-x-4">
+              Submit
+              <motion.div initial={{ x: -10 }} whileHover={{ x: 0 }}>
+                <Image
+                  src={assets.right_arrow_white}
+                  alt="submit"
+                  className="w-4 ml-3"
+                />
+              </motion.div>
+            </div>
+          )}
         </motion.button>
       </motion.form>
     </motion.div>

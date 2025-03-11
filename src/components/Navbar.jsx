@@ -45,18 +45,18 @@ function Navbar() {
       }`}
     >
       <div>
-        <a href="#home">
+        <a href="/">
           <Image
             src={theme === "dark" ? assets.logo_dark : assets.logo}
             alt="logo"
-            className="w-32 cursor-pointer mr-14"
+            className="w-40 cursor-pointer mr-14"
           />
         </a>
       </div>
       <div className="flex gap-x-5">
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3">
           <li>
-            <a className="font-Outfit text-lg" href="#home">
+            <a className="font-Outfit text-lg" href="/">
               Home
             </a>
           </li>
@@ -84,10 +84,13 @@ function Navbar() {
           />
         </button>
         <button className="block md:hidden ml-3" onClick={openMenu}>
-          <Image src={theme === "dark" ? assets.menu_white : assets.menu_black} alt="menu" className="w-5" />
+          <Image
+            src={theme === "dark" ? assets.menu_white : assets.menu_black}
+            alt="menu"
+            className="w-5"
+          />
         </button>
       </div>
-
 
       <ul
         ref={sideMenuRef}

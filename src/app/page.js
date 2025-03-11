@@ -4,6 +4,9 @@ import About from "@/components/About";
 import Contribution from "@/components/Contribution";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Skill from "@/components/Skill";
+import Project from "@/components/Project";
+import Github from "@/components/Github";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
+      <Skill />
+      <Project />
+      <Github />
       <Contribution />
       <Contact />
       <Footer />
