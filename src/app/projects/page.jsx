@@ -36,7 +36,7 @@ function Projects() {
 
             <div className="p-4">
               <div className="flex justify-between">
-                <h3 className="text-black dark:text-white text-lg font-semibold">
+                <h3 className="text-black dark:text-white text-xl font-semibold font-Ovo">
                   {project.title}
                 </h3>
                 <div className="flex  gap-x-2">

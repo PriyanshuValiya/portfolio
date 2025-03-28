@@ -40,7 +40,7 @@ const skills = [
   },
   {
     name: "MongoDB",
-    logo: "https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSITHn_TgjDyhdWvePNw0mveDrTUr00GLfv_Q&s",
     height: 100,
     width: 100
   },

@@ -29,6 +29,14 @@ import code_hire from "./code-hire.png";
 import lesson_appreciation from "./lesson_appreciation.png";
 import gssoc from "./gssoc.png";
 import gamma from "./gamma.png";
+import lesson_portal from "./lesson-portal.png";
+import v0_clone from "./v0-clone.png";
+import code_hire_tech from "./code-hire-tech.png";
+import google_notes from "./google-notes.png";
+import youtube from "./youtube.png";
+import shopcart from "./shopcart.png";
+import weather from "./weather.png";
+import shopdeal from "./shopdeal.png"
 
 export const assets = {
   code_icon,
@@ -61,7 +69,15 @@ export const assets = {
   code_hire,
   lesson_appreciation,
   gssoc,
-  gamma
+  gamma,
+  lesson_portal,
+  v0_clone,
+  code_hire_tech,
+  google_notes,
+  youtube,
+  shopcart,
+  weather,
+  shopdeal
 };
 
 export const workData = [
@@ -137,34 +153,26 @@ export const infoList = [
   },
 ];
 
-export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
-  assets.git,
-];
-
 export const projects = [
   {
     title: "CodeHire",
-    description: "AI-Powered mock interview taker",
-    image: assets.code_hire,
+    description: "AI-Powered mock interview taker plateform",
+    image: assets.code_hire_tech,
     tech: ["Next.js", "Node", "Express", "MongoDB"],
     prodUrl: "https://code-hire.priyanshuvaliya.me",
   },
   {
     title: "v0-clone",
     description: "AI based online website generator",
-    image: assets.code_hire,
+    image: assets.v0_clone,
     tech: ["Next.js", "Supabase", "Tailwind", "Gemini API"],
-    prodUrl: "http://v0-clone-azure.vercel.app/",
+    prodUrl: "https://v0-clone-azure.vercel.app",
   },
   {
     title: "Lesson Planning",
-    description: "College's exam planner",
-    image: assets.code_hire,
-    tech: ["Next.js", "Supabase", "Typescript"],
+    description: "College's exam planner portal",
+    image: assets.lesson_portal,
+    tech: ["Next.js", "Node", "Supabase", "Typescript"],
     prodUrl:
       "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
   },
@@ -173,130 +181,117 @@ export const projects = [
 export const moreProjects = [
   {
     title: "CodeHire",
-    description: "AI-Powered mock interview taker",
-    image: assets.code_hire,
+    description: "AI-Powered mock interview taker plateform",
+    image: assets.code_hire_tech,
     tech: ["Next.js", "Node", "Express", "MongoDB"],
     prodUrl: "https://code-hire.priyanshuvaliya.me",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
+    githubUrl: "https://github.com/PriyanshuValiya/CodeHire",
     feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
+      "Includes Technical, Behavioral, and Aptitude rounds",
+      "AI-Powered resume generator, Highly efficient ATS checker",
+      "Selected for College Project for University Execution",
     ],
   },
   {
     title: "v0-clone",
     description: "AI based online website generator",
-    image: assets.code_hire,
-    tech: ["Next.js", "Supabase", "Tailwind", "Gemini API"],
-    prodUrl: "http://v0-clone-azure.vercel.app/",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
+    image: assets.v0_clone,
+    tech: ["Next.js", "Supabase", "Tailwind", "Gemini API", "Clerk"],
+    prodUrl: "https://v0-clone-azure.vercel.app",
+    githubUrl: "https://github.com/PriyanshuValiya/v0-clone",
     feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
+      "AI-Powered static website generator",
+      "Chat based website editor",
+      "Includes PayPal api for subscriptions",
     ],
   },
   {
     title: "Lesson Planning",
-    description: "College's exam planner",
-    image: assets.code_hire,
-    tech: ["Next.js", "Supabase", "Typescript"],
-    prodUrl: "https://code-hire.priyanshuvaliya.me",
+    description: "College's exam planner portal",
+    image: assets.lesson_portal,
+    tech: ["Next.js", "Node", "Supabase", "Typescript"],
+    prodUrl: "",
     githubUrl:
       "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
     feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
+      "Efficiently manages the entire college's faculty and exam data",
+      "Upcoming exams and lesson planning management system",
+      "Currently in live production and actively used by the college",
     ],
   },
   {
-    title: "CodeHire",
-    description: "AI-Powered mock interview taker",
-    image: assets.code_hire,
-    tech: ["Next.js", "Node", "Express", "MongoDB"],
-    prodUrl: "https://code-hire.priyanshuvaliya.me",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
-    feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-    ],
-  },
-  {
-    title: "v0-clone",
-    description: "AI based online website generator",
-    image: assets.code_hire,
-    tech: ["Next.js", "Supabase", "Tailwind", "Gemini API"],
-    prodUrl: "http://v0-clone-azure.vercel.app/",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
-    feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-    ],
-  },
-  {
-    title: "Lesson Planning",
-    description: "College's exam planner",
-    image: assets.code_hire,
-    tech: ["Next.js", "Supabase", "Typescript"],
+    title: "Google Notes",
+    description: "Multiuser notes taker website",
+    image: assets.google_notes,
+    tech: ["EJS", "Express", "MongoDB", "Passport", "Bootstrap"],
     prodUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
+      "https://google-notes-mrbxgsina-priyanshuvaliyas-projects.vercel.app",
+    githubUrl: "https://github.com/PriyanshuValiya/Google-Notes",
     feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
+      "Multiple users can create, edit, and share notes",
+      "Support for formatted text, lists, and links",
+      "Responsive design for seamless access on any device",
     ],
   },
   {
-    title: "CodeHire",
-    description: "AI-Powered mock interview taker",
-    image: assets.code_hire,
-    tech: ["Next.js", "Node", "Express", "MongoDB"],
-    prodUrl: "https://code-hire.priyansuvaliya.me",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
-    feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-    ],
-  },
-  {
-    title: "v0-clone",
+    title: "Youtube Clone",
     description: "AI based online website generator",
-    image: assets.code_hire,
+    image: assets.youtube,
     tech: ["Next.js", "Supabase", "Tailwind", "Gemini API"],
-    prodUrl: "http://v0-clone-azure.vercel.app/",
-    githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
+    prodUrl: "https://youtube-clone-swart-eight.vercel.app",
+    githubUrl: "https://github.com/PriyanshuValiya/Youtube-Clone",
     feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
+      "Showing real feeds from Youtube API",
+      "Listing real comments from API",
+      "Showing relavent videos in feed",
     ],
+  },
+  {
+    title: "ShopCart",
+    description: "E-Commerce Plateform",
+    image: assets.shopcart,
+    tech: ["React", "Material UI"],
+    prodUrl: "https://priyanshuvaliya-shopcart.onrender.com",
+    githubUrl: "https://github.com/PriyanshuValiya/ShopCart",
+    feats: [
+      "Category-wise product listing",
+      "Add-to-cart functionality",
+      "State management across all pages",
+    ],
+  },
+  {
+    title: "Weather App",
+    description: "Open Source Contribution Project",
+    image: assets.weather,
+    tech: ["HTML", "CSS", "JavaScript", "Chart.js", "OpenWeather"],
+    prodUrl: "https://clubgamma.github.io/Weather-Web-App-2024",
+    githubUrl:
+      "https://github.com/clubgamma/Weather-Web-App-2024",
+    feats: [
+      "Daily Weather, Air Quality, Gas Quality",
+      "1-Week Forecast Graph",
+      "World Global Warming Map",
+    ],
+  },
+  {
+    title: "ShopDeal",
+    description: "Basic E-Commerce Website",
+    image: assets.shopdeal,
+    tech: ["HTML", "CSS"],
+    prodUrl: "https://shop-deal.vercel.app",
+    githubUrl:
+      "https://github.com/PriyanshuValiya/ShopDeal",
+    feats: [],
   },
   {
     title: "Lesson Planning",
     description: "College's exam planner",
     image: assets.code_hire,
-    tech: ["Next.js", "Supabase", "Typescript"],
+    tech: ["Figma"],
     prodUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
+      "https://www.figma.com/proto/M89FIqF8TtPFMIfi00ddMN/Pizza-Hut?type=design&node-id=3-7&t=XDRYa8Hul8JAvtRW-0&scaling=scale-down&page-id=0%3A1",
     githubUrl:
-      "https://github.com/PriyanshuValiya/lesson-planning-application-v1",
-    feats: [
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-      "AI-Powered mock interview taker",
-    ],
+      "https://www.figma.com/proto/M89FIqF8TtPFMIfi00ddMN/Pizza-Hut?type=design&node-id=3-7&t=XDRYa8Hul8JAvtRW-0&scaling=scale-down&page-id=0%3A1",
+    feats: [],
   },
 ];

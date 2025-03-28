@@ -46,12 +46,14 @@ function About() {
           />
         </motion.div>
 
-        <div className="flex-1 pt-16">
+        <div className="flex-1 pt-10">
           <p className="mb-10 max-w-2xl font-Ovo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-            aspernatur eius, dolorum neque optio omnis culpa sint ut vitae ipsum
-            hic delectus eveniet possimus at voluptate officia ratione,
-            consequatur natus!
+            Hello! I am a passionate second-year Computer Science student at
+            Charusat University with a strong enthusiasm for learning new
+            technologies and building innovative projects. I actively contribute
+            to open-source projects and enjoy collaborating with like-minded
+            individuals to create impactful solutions. I am always eager to
+            expand my skill set and take on new challenges.
           </p>
 
           <motion.ul
