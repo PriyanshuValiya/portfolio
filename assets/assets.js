@@ -36,7 +36,8 @@ import google_notes from "./google-notes.png";
 import youtube from "./youtube.png";
 import shopcart from "./shopcart.png";
 import weather from "./weather.png";
-import shopdeal from "./shopdeal.png"
+import shopdeal from "./shopdeal.png";
+import figma from "./figma.png";
 
 export const assets = {
   code_icon,
@@ -77,7 +78,8 @@ export const assets = {
   youtube,
   shopcart,
   weather,
-  shopdeal
+  shopdeal,
+  figma
 };
 
 export const workData = [
@@ -137,7 +139,7 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Projects",
-    description: "Built more than 15 projects",
+    description: "Built more than 17 projects",
   },
   {
     icon: assets.edu_icon,
@@ -284,14 +286,14 @@ export const moreProjects = [
     feats: [],
   },
   {
-    title: "Lesson Planning",
-    description: "College's exam planner",
-    image: assets.code_hire,
+    title: "Pizza Hut",
+    description: "Food Ordering Website",
+    image: assets.figma,
     tech: ["Figma"],
     prodUrl:
-      "https://www.figma.com/proto/M89FIqF8TtPFMIfi00ddMN/Pizza-Hut?type=design&node-id=3-7&t=XDRYa8Hul8JAvtRW-0&scaling=scale-down&page-id=0%3A1",
+      "https://www.figma.com/proto/M89FIqF8TtPFMIfi00ddMN/Pizza-Hut?node-id=3-7",
     githubUrl:
-      "https://www.figma.com/proto/M89FIqF8TtPFMIfi00ddMN/Pizza-Hut?type=design&node-id=3-7&t=XDRYa8Hul8JAvtRW-0&scaling=scale-down&page-id=0%3A1",
+      "https://www.figma.com/proto/M89FIqF8TtPFMIfi00ddMN/Pizza-Hut?node-id=3-7",
     feats: [],
   },
 ];

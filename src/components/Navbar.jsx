@@ -47,7 +47,7 @@ function Navbar() {
       <div>
         <a href="/">
           <Image
-            src={theme === "dark" ? assets.logo_dark : assets.logo}
+            src={theme === "dark" ? assets.logo : assets.logo}
             alt="logo"
             className="w-40 cursor-pointer mr-14"
           />
